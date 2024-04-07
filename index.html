@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webiste</title>
+    <link rel="stylesheet" href="harold.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+</head>
+<body class = "dark-mode">
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a id = "harold-symbol" href="https://github.com/Hale0123"><span class="text-3d">HL</span></a></li>
+                <li><a href="#home" class = "link" id="home-link"><i class="fa fa-home"></i></a></li>
+                <li><a href="#project" class = "link" id="project-link">Project</a></li>
+                <li><a href="#skill"  class = "link" id="skill-link">Skill</a></li>
+                <li class="highlight"><a href="Harold_Le_Resume.pdf" download>Resume ⟶</a></li>
+                <li><a href="#contact" class ="link">Contact</a></li>
+                <li><a href="#" id="mode-toggle" onclick="toggleMode(event)"><img id="mode-icon" src="sun.png" alt="Moon" style="width: 30px; height: 30px;"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home" class="slide-up">
+        <div class="container">
+            <div class="bio-connect-profile-container">
+                <!-- Bio and Connect Container -->
+                <div class="bio-connect-container">
+                    <div class="typewriter">
+                        <h1>I'm a <span class = "auto-type"></span></h1>
+                    </div>
+
+                    <div class="bio-container">
+                        <p>Hi! I'm <span id="myName">Harold Le</span>. Through this website, I hope to share the guiding ideals and ideas that shape the person 
+                        I aspire to be and the good change I want to see in the world.
+                        Inspired by innovation and technology I want to use my creativity to help crafting the future of digital era and shape a brighter world. 
+                        Feel free to reach out and connect with me.</p>
+                    </div>
+                    <!-- Connect box -->
+                    <div class="connect-container">
+                        <div class="connect-box">
+                            <a href="#connect" id="connect-link">Connect with me</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Container -->
+                <div class="profile-container" id="profile-picture">
+                    <img src="harold.png" alt="My Profile Picture" style="width: 400px; height: 400px; border-radius: 10%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="project" class="slide-up" >
+    <div class="container">
+        <h1>Projects</h1>
+        <p>---Check out some of my projects---</p>
+        <div class="project-boxes">
+            <a>
+                <div class="project-box" id="project1" onclick = "link_to_page('project1.html')">
+                    <h3>MCMASTER PROJECT 1: Wind Turbine Design</h3>
+                </div>
+            </a>
+            <a>
+                <div class="project-box" id ="project2" onclick = "link_to_page('project2.html')">
+                    <h3>MCMASTER PROJECT 2: Q-Arm and Surgical Container</h3>
+                </div>
+            </a>
+            <a>
+                <div class="project-box" id = "project3" onclick = "link_to_page('project3.html')">
+                    <h3>MCMASTER PROJECT 3: Hopper Mechanism and Recycling Robot</h3>
+                </div>
+            </a>
+        </div>
+        <div class="project-boxes">
+            <a href="project4.html">
+                <div class="project-box" id ="project4"> 
+                    <h3>MCMASTER PROJECT 4:</h3>
+                    <p>Description of Project 4</p>
+                </div>
+            </a>
+            <a href="project5.html">
+                <div class="project-box">
+                    <h3>Project 5</h3>
+                    <p>Description of Project 5</p>
+                </div>
+            </a>
+            <a href="project6.html">
+                <div class="project-box">
+                    <h3>Project 6</h3>
+                    <p>Description of Project 6</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</section>
+
+<section id="connect" class="slide-up" style="display: none;">
+    <div class="texting-container">
+        <h2>Connect with <span id="glowing-text" style="color: lightgoldenrodyellow; text-shadow: 0 0 10px whitesmoke;">Le</span></h2>
+        <form id="connect-form" action="https://api.web3forms.com/submit" method="POST" >
+            <input type="hidden" name="access_key" value="5ac8e2a9-814e-41e2-aac1-08cbbe7eca48">
+            <div class="form-group" id="name-box">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" autocomplete="name" placeholder="Full name" required>
+            </div>
+            <div class="form-group" id="email-box">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="Email" required>
+            </div>
+            <div class="form-group" id="message-box">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" autocomplete="message" placeholder="Leave a message..." required></textarea>
+            </div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <button type="submit" name="send">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<section id="skill" class="slide-up" >
+    <div class="container">
+        <h2>Personal Skills</h2>
+        <div class="skill-boxes flex-container">
+            <div class="skill-box" id="skill1">
+                <h3>HTML</h3>
+                <div class="skill-description">
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                    <p>Description for HTML</p>
+                </div>
+            </div>
+            <div class="skill-box" id="skill2">
+                <h3>CSS</h3>
+                <div class="skill-description">
+                    <p>Description for CSS</p>
+                </div>
+            </div>
+            <div class="skill-box" id="skill3">
+                <h3>JavaScript</h3>
+                <div class="skill-description">
+                    <p>Description for JavaScript</p>
+                </div>
+            </div>
+            <div class="skill-box" id="skill4"> 
+                <h3>Python</h3>
+                <div class="skill-description">
+                    <p>Description for Python</p>
+                </div>
+            </div>
+            <div class="skill-box" id="skill5"> 
+                <h3>AutoDesk</h3>
+                <div class="skill-description">
+                    <p>Description for Autodesk</p>
+                </div>
+            </div>
+            <div class="skill-box" id="skill7"> 
+                <h3>Certificate</h3>
+                <div class="skill-description">
+                    <p>Description for Certificate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>
+            <a href="mailto:haroldle2735@gmail.com" >
+                <span class ="contact-icon">
+                    <i class="ri-mail-line"></i>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/harold-le-588172294/" >
+                <span class ="contact-icon">
+                    <i class="ri-linkedin-fill"></i>
+                </span>
+            </a>
+            <a href="https://github.com/Hale0123">
+                <span class ="contact-icon">
+                    <i class="ri-github-fill"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/tl.harold_/" >
+                <span class ="contact-icon">
+                    <i class="ri-instagram-line"></i>
+                </span>
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Harold Le. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="harold.js"></script>
+<script>
+    function toggleMode() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+    }
+</script>
+
+<script>
+    function toggleMode(event) {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+        var body = document.body;
+        var icon = document.getElementById("mode-icon");
+        var glowingText = document.getElementById("glowing-text");
+        var connectBox = document.querySelector(".connect-box");
+        var contactBox = document.querySelector(".contact-wrapper");
+        var haroldSymbol = document.querySelector(".text-3d");
+        var skillBoxes = document.querySelectorAll(".skill-box"); // Fixed variable name
+
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            body.style.backgroundColor = "white";
+            icon.src = "moon.png";
+            glowingText.style.color = "orange"; // Change color for light mode
+            connectBox.style.border = "3px solid #222";
+            contactBox.style.backgroundColor = "white";
+            haroldSymbol.style.color = "orange";
+            skillBoxes.forEach(function(skillBox) {
+                skillBox.style.border = "2px solid black"; // Change border color for light mode
+            });
+        } else {
+            body.classList.add("dark-mode");
+            icon.src = "sun.png";
+            body.style.backgroundColor = "#222";
+            glowingText.style.color = "lightgoldenrodyellow"; // Change color for dark mode
+            connectBox.style.border = "transparent";
+            contactBox.style.backgroundColor = "#444";
+            haroldSymbol.style.color = "rgb(252, 255, 190)";
+            skillBoxes.forEach(function(skillBox) {
+                skillBox.style.border = "2px solid #ccc"; // Change border color for dark mode
+            });
+        }
+    }
+</script>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var type = new Typed(".auto-type" ,{
+        strings: ["Student at McMaster University","Programmer","Web Developer", "Computer Engineer","High School Athlete","Engineer Student",],
+        typeSpeed:70,
+        backSpeed:40,
+        loop: true
+    })
+</script>
+
+<script>
+    function link_to_page(url) {
+      window.location.href = url;
+    }
+    </script>
+
+</body>
+</html>
