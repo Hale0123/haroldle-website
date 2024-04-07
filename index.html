@@ -19,7 +19,7 @@
                 <li><a href="#skill"  class = "link" id="skill-link">Skill</a></li>
                 <li class="highlight"><a href="Harold_Le_Resume.pdf" download>Resume ⟶</a></li>
                 <li><a href="#contact" class ="link">Contact</a></li>
-                <li><a href="#" id="mode-toggle" onclick="toggleMode(event)"><img id="mode-icon" src="sun.png" alt="Moon" style="width: 30px; height: 30px;"></a></li>
+                <li><a href="#"  onclick="toggleMode(event)"><i id="mode-toggle" class="ri-sun-line" style ="font-size: 25px;"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -221,8 +221,8 @@
     function toggleMode(event) {
         event.preventDefault(); // Prevent the default behavior of the anchor tag
         var body = document.body;
-        var icon = document.getElementById("mode-icon");
-        var glowingText = document.getElementById("glowing-text");
+        var icon = document.getElementById("mode-toggle");
+        var glowingText = document.querySelector(".text-3d");
         var connectBox = document.querySelector(".connect-box");
         var contactBoxes = document.querySelectorAll(".contact-icon");
         var haroldSymbol = document.querySelector(".text-3d");
@@ -231,7 +231,8 @@
         if (body.classList.contains("dark-mode")) {
     // Dark Mode
     body.classList.remove("dark-mode");
-    icon.src = "moon.png";
+    icon.classList.remove("ri-sun-line");
+    icon.classList.add("ri-moon-line");
     body.style.backgroundColor = "white";
     glowingText.style.color = "orange"; // Change color for light mode
     connectBox.style.border = "3px solid #222";
@@ -251,7 +252,8 @@
 } else {
     // Light Mode
     body.classList.add("dark-mode");
-    icon.src = "sun.png";
+    icon.classList.remove("ri-moon-line");
+    icon.classList.add("ri-sun-line");
     body.style.backgroundColor = "#222";
     glowingText.style.color = "lightgoldenrodyellow"; // Change color for dark mode
     connectBox.style.border = "transparent";
