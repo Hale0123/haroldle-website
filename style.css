@@ -1,0 +1,720 @@
+
+#project {
+    display: none; 
+}
+
+#skill{
+    display: none;
+}
+
+#connect{
+    display: none;
+} 
+
+body {
+    font-size: 20px;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+
+section {
+    margin-bottom: 0px; /* Adjust this value as needed */
+}
+
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*Bio and connect container*/
+.bio-connect-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+/*Profile Container*/
+.profile-container {
+    flex-shrink: 0; /* Prevent the profile container from shrinking */
+    flex: 0 0 auto; /* Don't grow or shrink */
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+.profile-container img {
+    display: flex; /* Make the profile picture a block element */
+    border-radius: 10%;
+}
+
+
+
+/*Bio Box*/
+.bio-container {
+    width: 750px; /* Adjust width as needed */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1.0s ease;
+    font-size: 20px;
+    margin-left: 50px; /* Adjust margin left to move the bio box more to the left */
+}
+
+
+.bio-container p {
+    text-align: left;
+}
+
+.bio-container:hover {
+    transition: transform 0.8s ease;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px black;
+}
+/*Combined container*/
+.bio-connect-profile-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap;
+}
+
+
+
+
+/*Connect box*/
+.connect-container {
+    display: flex;
+    justify-content: flex-start; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100px; /* Adjust height as needed */
+    margin-left: 75px;  
+}
+
+.connect-box {
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 25px whitesmoke;
+    transition: transform 1.0s ease;
+    /*border: 3px solid #222*/
+    
+}
+
+.connect-box:hover {
+    transform: scale(1.1);
+    transition: transform 1.0s ease;
+
+
+}
+.connect-box a {
+    text-decoration: none;
+    color: #333;
+}
+.connect-container {
+    margin-top: 0px; /* Adjust the top margin as needed */
+}
+
+/* Adjust the size of bio-connect-profile-container for smaller screens */
+@media screen and (max-width: 768px) {
+    .bio-connect-profile-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .profile-container {
+      justify-content: center;
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 20px; /* Add bottom margin to create space */
+    }
+  
+    .bio-container {
+      margin-left: 0; /* Remove left margin */
+      width: 100%; /* Make the bio box full width */
+    }
+  
+    .connect-container {
+        margin-left: 0;
+        justify-content:center; /* Center the connect box horizontally */
+    }
+  }
+  
+/*Harold Symbol*/
+#harold-symbol{
+    float: left; /* Align the HL symbol to the left */
+    margin-left: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    
+
+}
+
+.text-3d {
+    color: rgb(252, 255, 190);
+    text-shadow: 0 0 10px whitesmoke;
+    font-size: 35px;
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/*Navigation bar*/
+.dark-mode header{
+    background-color: #222;
+}
+
+header{
+    background-color: #fff;
+}
+
+nav li{
+    list-style: none;
+}
+
+.dark-mode nav a{
+    color:#fff;
+    text-decoration: none;
+}
+
+nav a{
+    color:#222;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 21px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+}
+
+
+/*Hamburger Menu*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+
+}
+
+.dark-mode .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: lightgoldenrodyellow;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: orange;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+    padding: 10px 0;
+
+}
+@media(max-width:1000px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .dark-mode .nav-menu{
+        position:absolute;
+        left: -100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        background-color: #222;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu{
+        position: absolute;
+        left: -100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+}
+
+
+
+.nav-link {
+    position: relative; /* Add this line */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lightgoldenrodyellow;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+
+/*Section and footer*/
+section {
+    padding: 20px 0;
+}
+
+footer {
+    font-size: 15px;
+    background-color: white;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+/*Project box and container*/
+#project .container h1, #project .container p{
+    text-align: center; 
+}
+
+#project .container h1{
+    font-size: 40px;
+    text-shadow: white;
+}
+
+
+.project-boxes {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+.project-box {
+    width: 330px; 
+    height: 200px; 
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    word-wrap: break-word; 
+    font-size: 15px;
+}
+
+
+.project-box:hover{
+    transition: transform 0.8s ease;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px black;
+    border: 3px solid lightgoldenrodyellow;
+   
+}
+
+
+.project-box h3 {
+    margin-top: 0;
+}
+
+.project-box p {
+    margin-bottom: 0;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode body {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+.dark-mode footer {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+
+.dark-mode section {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+.dark-mode .bio-container {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+
+#mode-icon {
+    font-size: 24px;
+    color: #FFD700; 
+}
+
+.dark-mode #mode-icon {
+    color: #c0c0c0; }
+
+
+
+/*Project1*/
+#project1{
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/78/15/wind-turbin-icon-isolated-on-black-background-vector-29537815.jpg");
+    background-size: cover;
+    color: lightgoldenrodyellow; 
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow;
+
+}
+
+/*Project 2*/
+#project2{
+    background-image: url("https://st3.depositphotos.com/6121364/36470/i/450/depositphotos_364702260-stock-photo-robotic-arm-isolated-black-background.jpg");
+    background-size: cover;
+    color: lightgoldenrodyellow; 
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow
+}
+
+/*Project 3*/
+#project3{
+    background-image: url("https://www.shutterstock.com/image-illustration/3d-rendering-black-robotic-arm-260nw-1089898151.jpg");
+    background-size: cover;
+    color: lightgoldenrodyellow; 
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow
+}
+
+/*Project 4*/
+#project4{
+    background-image: url("https://www.shutterstock.com/image-illustration/modified-wheelchair-used-by-handicapped-260nw-1056619571.jpg");
+    background-size: cover;
+    color: lightgoldenrodyellow; 
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow
+}
+
+#project5{
+    color:lightgoldenrodyellow;
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow
+}
+
+#project6{
+    color:lightgoldenrodyellow;
+    text-decoration: none;
+    text-shadow: lightgoldenrodyellow
+}
+/*--End of Project section--*/
+
+/*Contact icon*/
+
+.dark-mode #contact{
+    color:#fff;
+    font-family: monospace;
+    margin-left:45px;
+}
+
+ #contact{
+    color:#222;
+    font-family: monospace;
+    margin-left:45px;
+}
+#contact .container p a {
+    display: inline-block; 
+    margin-right: 20px;
+
+}
+ .contact-icon{
+    display: inline-block;
+    background-color: #222;
+    padding: 5px 7px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: lightgoldenrodyellow;
+    border-radius: 70px;
+    border: solid 2px
+
+ }
+
+ .contact-icon:hover{
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    padding: 5px 7px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #222;
+    border-radius: 70px;
+    border: solid 2px
+}
+
+
+/*Type writter effect*/
+span{
+    font-family: monospace;
+    color: orange;
+}
+
+.typewriter h1{
+    font-size: 40px;
+}
+
+.typewriter{
+    margin-left:70px;
+}
+
+
+
+/* Apply animation to the content */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        background-color: transparent; /* Start with a transparent background */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+ 
+    }
+}
+
+.slide-up {
+    animation: slideInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+
+/*Connect box modify*/
+.texting-container h2{
+    font-size: 35px;
+}
+.texting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Center items vertically */
+    height: 100vh; /* Set container height to viewport height */
+    border: solid #ccc;
+    border-radius:30px;
+    box-shadow: 10px;
+    width: 700px;
+    /*Center container*/
+    margin: 0 auto;
+    height:700px;
+    margin-top: 50px;
+    
+}
+
+#name-box input,
+#email-box input,
+#message-box textarea {
+    width: 400px; /* Set a fixed width for all input fields and textarea */
+    height: 40px; /* Keep the height consistent */
+    margin-bottom: 20px; /* Add spacing between form groups */
+    border-radius: 15px; /* Rounded corners for input fields */
+    border: 2px solid #ccc; /* Add a border to input fields */
+    padding: 10px; /* Add padding for better appearance */
+    display: block; /* Ensure each input field and textarea takes up its own line */
+    font-size: 17px;
+    font-family: monospace;
+}
+
+#message-box textarea {
+    height: 150px; /* Adjust height of the textarea */
+    
+}
+
+#connect-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+#connect-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left within each form group */
+}
+
+#connect-form label {
+    margin-bottom: 15px; /* Add right padding to create space between label and input */
+    font-weight: bold; /* Optionally make labels bold */
+    font-size: 16px; /* Optionally adjust font size */
+}
+
+/*Send button*/
+button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: monospace;
+    width:160px;
+    height:45px;
+    background-color:lightgoldenrodyellow;
+    color: #333;
+    border: solid 2px black;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 25px whitesmoke;
+}
+
+button:hover {
+    background-color: rgb(180, 180, 145);
+}
+/*My name*/
+#myName{
+    font-size: 20px;
+    color: orange;
+    text-shadow: 0 0 3px orange;
+
+}
+
+
+
+
+/*Skill box*/
+.skill-features{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+ }
+
+ .dark-mode .skill-features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3 ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 400px;
+    margin-bottom: 30px;
+
+ }
+
+ .dark-mode .skill-features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+
+ }
+
+ .dark-mode .skill-features .card span{
+    color: lightgoldenrodyellow;
+    font-size: 4rem;
+ }
+
+ .dark-mode .skill-features .card p{
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+ }
+
+ .dark-mode .skill-features .card h4{
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+ }
+
+#skill .container h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/*light mode skill*/
+ .skill-features .card{
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3 ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+ }
+
+ .skill-features .card span{
+    color: orange;
+    font-size: 4rem;
+ }
+
+ .skill-features .card p{
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+ }
+
+ .skill-features .card h4{
+    color: #444;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+ }
+
+ .skill-features .card:hover{
+    border-color: #333;
+
+ }
+
+ 
